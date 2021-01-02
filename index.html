@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="wconstth=device-wconstth, initial-scale=1.0">
     <title>Document</title>
     <style>
         .heading {
@@ -12,14 +12,14 @@
             text-align: center;
             padding: 5px 10px 5px 10px;
             border-radius: 7px;
-            max-width: 800px;
+            max-wconstth: 800px;
         }
 
         .detail {
             box-shadow: 2px 2px 6px black;
             border-radius: 7px;
             padding: 5px 10px 5px 10px;
-            max-width: 800px;
+            max-wconstth: 800px;
         }
 
         .container {
@@ -42,6 +42,26 @@
             color: rgb(238, 148, 148);
             float: right;
             margin-right: 40px;
+        }
+
+        kw {
+            color: rgb(6, 131, 214);
+        }
+
+        const {
+            color: rgb(68, 166, 231);
+        }
+
+        func {
+            color: rgb(214, 214, 28);
+        }
+
+        str {
+            color: rgb(235, 96, 72);
+        }
+
+        vars {
+            color: skyblue;
         }
     </style>
 </head>
@@ -82,27 +102,31 @@
         <code class="detail code">
             <span class="code-type">JavaScript</span><br><br>
 
-            const Express = require("express");<br>
-            const app = Express();<br>
-            const photon = require("potassium");<br>
+            <kw>const</kw>
+            <const>Express</const> = <func>require</func>(<str>"express"</str>);<br>
+            <kw>const</kw>
+            <const>app</const> = <func>Express</func>();<br>
+            <kw>const</kw>
+            <const>potassium</const> = <func>require</func>(<str>"potassium"</str>);<br>
             <br>
-            app.engine('html', photon.engine);<br>
-            app.set('views', './views');<br>
-            app.set('view engine', 'html');<br>
+            <const>app</const>.<func>engine</func>(<str>'html'</str>, <const>potassium</const>.<func>engine</func>);<br>
+            <const>app</const>.<func>set</func>(<str>'views'</str>, <str>'./views'</str>);<br>
+            <const>app</const>.<func>set</func>(<str>'view engine'</str>, <str>'html'</str>);<br>
             <br>
-            app.get('/', (req, res) => {<br>
-            res.render("main" , { user: "Hello World" });
+            <const>app</const>.<func>get</func>('/', (<vars>req</vars>, <vars>res</vars>) => {<br>
+            <const>res</const>.<func>render</func>(<str>"main"</str> , { <vars>user</vars>: <str>"Hello World"</str> });
             }
             );<br>
             <br>
-            app.listen(3000, (err) => { <br>
-            return err && console.err(err) ||
-            console.log("server started on port 3000") })
+            <const>app</const>.<func>listen</func>(3000, (<vars>err</vars>) => { <br>
+            <kw>return</kw>
+            <vars>err</vars> && <vars>console</vars>.<func>err</func>(<vars>err</vars>) ||
+            <vars>console</vars>.<func>log</func>(<str>"server started on port 3000"</str>) })
 
         </code>
         <code class="detail code">
             <span class="code-type">Template</span><br><br>
-            &lt;h1&gt;{{ msg }}&lt;/h1&gt;
+            <const>&lt;h1&gt;</const>{{ <vars>msg</vars> }}<const>&lt;/h1&gt;</const>
         </code>
     </div>
 </body>
