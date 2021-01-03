@@ -6,20 +6,42 @@
     <meta name="viewport" content="wconstth=device-wconstth, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
         .heading {
             box-shadow: 2px 2px 6px black;
             background-color: aqua;
             text-align: center;
             padding: 5px 10px 5px 10px;
             border-radius: 7px;
-            max-wconstth: 800px;
+            max-width: 800px;
+            width: 90%;
         }
 
         .detail {
             box-shadow: 2px 2px 6px black;
             border-radius: 7px;
             padding: 5px 10px 5px 10px;
-            max-wconstth: 800px;
+            width: 90%;
+            max-width: 800px;
         }
 
         .container {
@@ -36,6 +58,10 @@
             color: blanchedalmond;
             padding: 20px;
             margin-top: 20px;
+
+            white-space: nowrap;
+            overflow-x: scroll;
+            text-overflow: ellipsis;
         }
 
         .code-type {
@@ -48,20 +74,32 @@
             color: rgb(6, 131, 214);
         }
 
+        kw2 {
+            color: violet
+        }
+
         const {
             color: rgb(68, 166, 231);
         }
 
         func {
-            color: rgb(214, 214, 28);
+            color: rgb(214, 214, 78);
         }
 
         str {
-            color: rgb(235, 96, 72);
+            color: rgb(233, 147, 132);
         }
 
         vars {
             color: skyblue;
+        }
+
+        indent1 {
+            margin-left: 30px;
+        }
+
+        indent2 {
+            margin-left: 60px;
         }
     </style>
 </head>
@@ -99,6 +137,7 @@
         <div>
             <h1 class="heading">Usage With ExpressJs</h1>
         </div>
+
         <code class="detail code">
             <span class="code-type">JavaScript</span><br><br>
 
@@ -119,7 +158,7 @@
             );<br>
             <br>
             <const>app</const>.<func>listen</func>(3000, (<vars>err</vars>) => { <br>
-            <kw>return</kw>
+            <kw2>return</kw2>
             <vars>err</vars> && <vars>console</vars>.<func>err</func>(<vars>err</vars>) ||
             <vars>console</vars>.<func>log</func>(<str>"server started on port 3000"</str>) })
 
@@ -127,6 +166,48 @@
         <code class="detail code">
             <span class="code-type">Template</span><br><br>
             <const>&lt;h1&gt;</const>{{ <vars>msg</vars> }}<const>&lt;/h1&gt;</const>
+        </code>
+        <div>
+            <h1 class="heading">Looping</h1>
+        </div>
+        <code class="detail code">
+            <span class="code-type">JavaScript</span><br><br>
+
+            <kw>const</kw>
+            <const>Express</const> = <func>require</func>(<str>"express"</str>);<br>
+            <kw>const</kw>
+            <const>app</const> = <func>Express</func>();<br>
+            <kw>const</kw>
+            <const>potassium</const> = <func>require</func>(<str>"potassium"</str>);<br>
+            <br>
+            <const>app</const>.<func>engine</func>(<str>'html'</str>, <const>potassium</const>.<func>engine</func>);<br>
+            <const>app</const>.<func>set</func>(<str>'views'</str>, <str>'./views'</str>);<br>
+            <const>app</const>.<func>set</func>(<str>'view engine'</str>, <str>'html'</str>);<br>
+            <br>
+            <const>app</const>.<func>get</func>('/', (<vars>req</vars>, <vars>res</vars>) => {<br>
+            <indent1>
+                <const>res</const>.<func>render</func>(<str>"main"</str>
+            </indent1>,
+            <br>
+            <indent2>{ <vars>users</vars>:
+                [{ name: <str>"User-1"</str>,lastname: <str>"Last-N-1"</str> }</indent2>,
+            <indent2>{ name: <str>"User-2"</str>, lastname: <str>"Last-N-2"</str> }]</indent2>
+            });
+            }<br />);<br>
+            <br>
+            <const>app</const>.<func>listen</func>(3000, (<vars>err</vars>) => { <br>
+            <kw2>return</kw2>
+            <vars>err</vars> && <vars>console</vars>.<func>err</func>(<vars>err</vars>) ||
+            <vars>console</vars>.<func>log</func>(<str>"server started on port 3000"</str>) })
+
+        </code>
+        <code class="detail code">
+            <span class="code-type">Template</span><br><br>
+            <const>&lt;ul</const> {{ <kw2>for</kw2>(<kw>let</kw> <vars>user</vars> <kw>of</kw> <vars>users</vars>) }}
+            <const>&gt</const>
+            <const>&lt;li&gt;</const>
+            {{ user.name }}<const>&lt;/li&gt;</const>
+            <const>&lt;/ul&gt;</const>
         </code>
     </div>
 </body>
