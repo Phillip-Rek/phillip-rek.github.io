@@ -61,7 +61,8 @@
 
             white-space: nowrap;
             overflow-x: scroll;
-            text-overflow: ellipsis;
+            text-overflow: clip;
+            float: left;
         }
 
         .code-type {
@@ -137,7 +138,6 @@
         <div>
             <h1 class="heading">Usage With ExpressJs</h1>
         </div>
-
         <code class="detail code">
             <span class="code-type">JavaScript</span><br><br>
 
@@ -265,6 +265,50 @@
                 <const>&lt;h1&gt;</const>ELSE BLOCK<const>&lt;/h1&gt;</const>
             </indent1><br>
             <const>&lt;/div&gt;</const>
+        </code>
+
+        <div>
+            <h1 class="heading">Calling functions on a Template</h1>
+        </div>
+        <code class="detail code">
+            <span class="code-type">JavaScript</span><br><br>
+
+            <kw>const</kw>
+            <const>Express</const> = <func>require</func>(<str>"express"</str>);<br>
+            <kw>const</kw>
+            <const>app</const> = <func>Express</func>();<br>
+            <kw>const</kw>
+            <const>potassium</const> = <func>require</func>(<str>"potassium"</str>);<br>
+            <br>
+            <const>app</const>.<func>engine</func>(<str>'html'</str>, <const>potassium</const>.<func>engine</func>);<br>
+            <const>app</const>.<func>set</func>(<str>'views'</str>, <str>'./views'</str>);<br>
+            <const>app</const>.<func>set</func>(<str>'view engine'</str>, <str>'html'</str>);<br>
+            <br>
+            <const>app</const>.<func>get</func>('/', (<vars>req</vars>, <vars>res</vars>) => {<br>
+            <indent1>
+                <const>res</const>.<func>render</func>(<str>"main"</str> , { <br>
+                <indent1>
+                    <vars>concat</vars>: (<vars>arg1</vars>,
+                    <vars>arg2</vars>)=>{
+                </indent1>
+            </indent1>
+            <kw2>return</kw2> arg1 + <str>" "</str> + arg2 } <br>
+            });<br>
+            <br>
+            <const>app</const>.<func>listen</func>(3000, (<vars>err</vars>) => { <br>
+            <indent1>
+                <kw2>return</kw2>
+                <vars>err</vars> && <vars>console</vars>.<func>err</func>(<vars>err</vars>) ||<br>
+                <indent2>
+                    <vars>console</vars>.<func>log</func>(<str>"server started on port 3000"</str>)
+                </indent2>
+            </indent1><br>})
+        </code>
+
+        <code class="detail code">
+            <span class="code-type">Template</span><br><br>
+            <const>&lt;h1&gt;</const>{{ <func>concat</func>(<str>"hello"</str>, <str>"world"</str>) }}<const>&lt;/h1&gt;
+            </const>
         </code>
     </div>
 </body>
