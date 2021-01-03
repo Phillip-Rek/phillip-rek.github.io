@@ -32,10 +32,14 @@
             box-shadow: 2px 2px 6px black;
             background-color: aqua;
             text-align: center;
-            padding: 5px 10px 5px 10px;
+            padding: 20px;
             border-radius: 7px;
             max-width: 800px;
-            width: 95%;
+            width: fit-content;
+        }
+
+        h2.heading {
+            margin-left: 10px;
         }
 
         .detail {
@@ -100,6 +104,20 @@
             margin: 0px;
         }
 
+        span.k-smbl {
+            font-weight: bolder;
+            font-size: 100px;
+            color: blue;
+        }
+
+        .logo {
+            padding: 20px;
+            background-color: rgb(206, 219, 215);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         kw {
             color: rgb(6, 131, 214);
         }
@@ -135,10 +153,12 @@
 </head>
 
 <body>
+    <div class="logo">
+        <h1 class="heading">
+            <span class="k-smbl">K</span> <br> Pottassium.js
+        </h1>
+    </div>
     <div class="container">
-        <div>
-            <h1 class="heading">Pottassium js</h1>
-        </div>
         <div class="detail">
             <p>
                 Light weight, Easy to learn <a href="https://en.m.wikipedia.org/wiki/JavaScript">JavaScript</a>
@@ -152,6 +172,29 @@
             </p>
         </div>
         <div>
+            <h2 class="heading">Why use Potassium</h2>
+        </div>
+        <div class="detail">
+            <p>
+                potassium is lightweight thus has a shallow
+                learning curve. Another thing is potassium will highlight
+                JavaScript code(i.e for loops:
+                <code
+                    style="background-color: black; font-size: 15px;color: white;">{{ <kw2>for</kw2>(<kw>let</kw> <vars>user</vars> <kw>of</kw> <vars>users</vars>) }}
+                </code>embedded into your template.
+                <br><br>
+                It is a simple project to start
+                contributing to, you don't need to be a JavaScript expert
+                all you need is goo background of JavaScript. You may also contribute
+                by writting online tutorials and articles about Potassium, that will be
+                appriciated.
+                <br> <br>
+                If you like this text highlighting then it is worth it to try Potassium.
+                However this text highlighting just comes out of the box,
+                no need to install it manually.
+            </p>
+        </div>
+        <div>
             <h2 class="heading">Getting Sartted</h2>
         </div>
         <div class="detail">
@@ -159,9 +202,17 @@
                 First thing is to make sure that you have Nodejs installed
                 in your computer. If you don't have NodeJs installed
                 you can download it <a href="https://www.nodejs.org/en">here</a>.
+            </p>
+        </div>
+        <div>
+            <h2 class="heading">Installation</h2>
+        </div>
+        <div class="detail">
+            <p>
                 For now you can download Potassium project from its
                 <a href="https://www.github.com/Phillip-Rek/potassium">github repository</a> and start using right
-                away.
+                away. But if you are wating for an oficial release that's fine
+                the project will be released soon.
             </p>
         </div>
         <div>
@@ -350,7 +401,7 @@
                 license: <a href="http://opensource.org/licenses/MIT">MIT License</a>
             </div>
             <div>
-                Checout our github repo.
+                Checout our github repository
                 <a href="https://github.com/Phillip-Rek/potassium">
                     <span class="fa fa-lg fa-github"></span>
                 </a>
