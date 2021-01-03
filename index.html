@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="wconstth=device-wconstth, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <style>
         /* width */
         ::-webkit-scrollbar {
@@ -56,7 +58,7 @@
             background-color: black;
             color: blanchedalmond;
             padding: 15px;
-            margin-top: 20px;
+            margin: 10px 0px 10px 0px;
 
             white-space: nowrap;
             overflow-x: scroll;
@@ -75,8 +77,9 @@
             color: white;
             display: flex;
             flex-wrap: wrap;
-            flex-direction: column;
-            align-content: space-around;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 25px;
         }
 
         footer a {
@@ -87,6 +90,12 @@
         html {
             width: 100%;
             height: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        div,
+        h2 {
             padding: 0px;
             margin: 0px;
         }
@@ -130,8 +139,8 @@
         <div>
             <h1 class="heading">Pottassium js</h1>
         </div>
-        <div>
-            <p class="detail">
+        <div class="detail">
+            <p>
                 Light weight, Easy to learn <a href="https://en.m.wikipedia.org/wiki/JavaScript">JavaScript</a>
                 Templating Engine that can work
                 on back-end with <a href="https://www.expressjs.com">ExpressJs</a> as well as on front-end.
@@ -145,8 +154,8 @@
         <div>
             <h2 class="heading">Getting Sartted</h2>
         </div>
-        <div>
-            <p class="detail">
+        <div class="detail">
+            <p>
                 First thing is to make sure that you have Nodejs installed
                 in your computer. If you don't have NodeJs installed
                 you can download it <a href="https://www.nodejs.org/en">here</a>.
@@ -264,6 +273,7 @@
 
         </code>
         <code class="detail code">
+            <span class="code-type">Template</span><br><br>
             <const>&lt;div</const> {{ if(users[0].name === "Chriss") }}<const>&gt;</const>
             <br>
             <indent1>
@@ -338,6 +348,12 @@
             </div>
             <div>
                 license: <a href="http://opensource.org/licenses/MIT">MIT License</a>
+            </div>
+            <div>
+                Checout our github repo.
+                <a href="https://github.com/Phillip-Rek/potassium">
+                    <span class="fa fa-lg fa-github"></span>
+                </a>
             </div>
         </footer>
     </div>
