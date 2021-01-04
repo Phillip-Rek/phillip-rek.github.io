@@ -33,13 +33,22 @@
         }
 
         h1.heading {
-            box-shadow: 2px 2px 6px black;
-            background-color: aqua;
+            box-shadow: 2px 2px 6px rgb(0, 0, 0);
+            background-color: rgb(91, 211, 219);
             text-align: center;
             padding: 20px;
             border-radius: 7px;
             max-width: 800px;
             width: fit-content;
+        }
+
+        .more {
+            padding: 10px 25px 10px 25px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
         }
 
         h2.heading {
@@ -58,7 +67,16 @@
             flex-wrap: wrap;
             flex-direction: column;
             align-content: space-around;
-            padding: 5px;
+            padding: 8px;
+            border: none;
+        }
+
+        .cutom-btn {
+            margin: 10px 0px 10px 0px;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 8px;
+            background-color: transparent;
         }
 
         .code {
@@ -101,6 +119,7 @@
             padding: 0px;
             margin: 0px;
             color: black;
+            background-color: wheat;
         }
 
         div,
@@ -111,16 +130,20 @@
 
         span.k-smbl {
             font-weight: bolder;
-            font-size: 100px;
-            color: blue;
+            font-size: 135px;
+            color: rgba(16, 13, 180, 0.87);
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         .logo {
             padding: 20px;
-            background-color: rgb(206, 219, 215);
+            background-color: rgb(91, 211, 219);
             display: flex;
             flex-wrap: wrap;
+            flex-direction: row;
             justify-content: center;
+            border: none;
+            border-radius: 0% 0% 50% 0%;
         }
 
         kw {
@@ -159,11 +182,26 @@
 
 <body>
     <div class="logo">
-        <h1 class="heading">
-            <span class="k-smbl">P</span> <br> Perthite.js
-        </h1>
+        <div>
+            <h1 class="heading">
+                <span class="k-smbl">P</span> <br> Perthite.js
+            </h1>
+        </div>
+        <div class="more">
+            <span>Author: Phillip Rekhotho</span>
+            <a class="cutom-btn" href="http://opensource.org/licenses/MIT" style="text-decoration-line: none;">MIT
+                License</a>
+            <a class="cutom-btn" href="https://github.com/Phillip-Rek/Perthite">
+                <span class="fa fa-lmd fa-github" style="color: black;">
+                    &nbsp;Github
+                </span>
+            </a>
+        </div>
     </div>
     <div class="container">
+        <div>
+            <h2 class="heading">About</h2>
+        </div>
         <div class="detail">
             <p>
                 Light weight, Easy to learn <a href="https://en.m.wikipedia.org/wiki/JavaScript">JavaScript</a>
@@ -193,8 +231,9 @@
                 <br><br>
                 It is a simple project to start
                 contributing to, you don't need to be a JavaScript expert
-                all you need is goo background of JavaScript. You may also contribute
-                by writting online tutorials and articles about Perthite, that will be
+                all you need is good background of JavaScript. You may also contribute
+                by writting online tutorials and articles about Perthite or improving the
+                documentation, that will be
                 appriciated.
 
             </p>
@@ -204,11 +243,11 @@
         </div>
         <div class="detail">
             <p>
-                First thing is to make sure that you have Nodejs installed
+                First thing is to make sure that you have NodeJS installed
                 in your computer. If you don't have NodeJs installed
                 you can download it <a href="https://www.nodejs.org/en">here</a>.
                 If you have node installed, go to your termnal and run <code
-                    style="background-color: rgb(51, 43, 43); color:white">npm i
+                    style="background-color: rgb(51, 43, 43); color:white">&gt; npm i
                     perthite</code>
             </p>
         </div>
@@ -406,7 +445,7 @@
                 Copyright: &copy; 2021 Phillip Rekhotho
             </div>
             <div>
-                license: <a href="http://opensource.org/licenses/MIT">MIT License</a>
+                License: <a href="http://opensource.org/licenses/MIT">MIT License</a>
             </div>
             <div>
                 Checout our github repository
