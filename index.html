@@ -2,14 +2,16 @@
 <html lang="en">
 
 <head>
-      <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-42434400-3', 'auto');
-      ga('send', 'pageview');
+        ga('create', 'UA-42434400-3', 'auto');
+        ga('send', 'pageview');
     </script>
     <meta charset="UTF-8">
     <meta name="author" content="Phillip Rekhotho">
@@ -155,8 +157,16 @@
             border-radius: 0% 0% 50% 0%;
         }
 
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+        }
+
         kw {
-            color: rgb(6, 131, 214);
+            color: rgb(1, 1, 2);
         }
 
         kw2 {
@@ -208,225 +218,239 @@
         </div>
     </div>
     <div class="container">
-        <div>
-            <h2 class="heading">About</h2>
+        <div class="section">
+            <div>
+                <h2 class="heading">About</h2>
+            </div>
+            <div class="detail">
+                <p>
+                    Light weight, Easy to learn <a href="https://en.m.wikipedia.org/wiki/JavaScript">JavaScript</a>
+                    Templating Engine that can work
+                    on back-end with <a href="https://www.expressjs.com">ExpressJs</a> as well as on front-end.
+                    Perthite is very easy to learn if you have a
+                    <a href="https://en.m.wikipedia.org/wiki/JavaScript">JavaScript</a>
+                    background bacause all does
+                    is to embed <a href="https://en.m.wikipedia.org/wiki/JavaScript">JavaScript</a>
+                    code into your <a href="https://en.m.wikipedia.org/wiki/html">HTML</a> code.
+                </p>
+            </div>
         </div>
-        <div class="detail">
-            <p>
-                Light weight, Easy to learn <a href="https://en.m.wikipedia.org/wiki/JavaScript">JavaScript</a>
-                Templating Engine that can work
-                on back-end with <a href="https://www.expressjs.com">ExpressJs</a> as well as on front-end.
-                Perthite is very easy to learn if you have a
-                <a href="https://en.m.wikipedia.org/wiki/JavaScript">JavaScript</a>
-                background bacause all does
-                is to embed <a href="https://en.m.wikipedia.org/wiki/JavaScript">JavaScript</a>
-                code into your <a href="https://en.m.wikipedia.org/wiki/html">HTML</a> code.
-            </p>
-        </div>
-        <div>
-            <h2 class="heading">Why use Perthite ?</h2>
-        </div>
-        <div class="detail">
-            <p>
-                Perthite is lightweight thus has a shallow
-                learning curve. Another thing is Perthite is a simple project to start
-                contributing to, you don't need to be a JavaScript expert
-                all you need is good background of JavaScript. You may also contribute
-                by writting online tutorials and articles about Perthite or improving the
-                documentation, that will be
-                appriciated.
+        <div class="section">
+            <div>
+                <h2 class="heading">Why use Perthite ?</h2>
+            </div>
+            <div class="detail">
+                <p>
+                    Perthite is lightweight thus has a shallow
+                    learning curve. Another thing is Perthite is a simple project to start
+                    contributing to, you don't need to be a JavaScript expert
+                    all you need is good background of JavaScript. You may also contribute
+                    by writting online tutorials and articles about Perthite or improving the
+                    documentation, that will be
+                    appriciated.
 
-            </p>
+                </p>
+            </div>
         </div>
-        <div>
-            <h2 class="heading">Installation</h2>
+        <div class="section">
+            <div>
+                <h2 class="heading">Installation</h2>
+            </div>
+            <div class="detail">
+                <p>
+                    First thing is to make sure that you have NodeJS installed
+                    in your computer. If you don't have NodeJs installed
+                    you can download it <a href="https://www.nodejs.org/en">here</a>.
+                    If you have node installed, go to your termnal and run <code
+                        style="background-color: rgb(51, 43, 43); color:white">&gt; npm i
+                        perthite</code>
+                </p>
+            </div>
         </div>
-        <div class="detail">
-            <p>
-                First thing is to make sure that you have NodeJS installed
-                in your computer. If you don't have NodeJs installed
-                you can download it <a href="https://www.nodejs.org/en">here</a>.
-                If you have node installed, go to your termnal and run <code
-                    style="background-color: rgb(51, 43, 43); color:white">&gt; npm i
-                    perthite</code>
-            </p>
-        </div>
-        
-            <h2 class="heading">Usage With ExpressJs</h2>
-        </div>
-        <code class="detail code">
-            <span class="code-type">JavaScript</span><br><br>
-
-            <kw>const</kw>
-            <const>Express</const> = <func>require</func>(<str>"express"</str>);<br>
-            <kw>const</kw>
-            <const>app</const> = <func>Express</func>();<br>
-            <kw>const</kw>
-            <const>Perthite</const> = <func>require</func>(<str>"Perthite"</str>);<br>
-            <br>
-            <const>app</const>.<func>engine</func>(<str>'html'</str>, <const>Perthite</const>.<func>engine</func>);<br>
-            <const>app</const>.<func>set</func>(<str>'views'</str>, <str>'./views'</str>);<br>
-            <const>app</const>.<func>set</func>(<str>'view engine'</str>, <str>'html'</str>);<br>
-            <br>
-            <const>app</const>.<func>get</func>('/', (<vars>req</vars>, <vars>res</vars>) => {<br>
-            <const>res</const>.<func>render</func>(<str>"main"</str> , { <vars>user</vars>: <str>"Hello World"</str> });
-            }
-            );<br>
-            <br>
-            <const>app</const>.<func>listen</func>(3000, (<vars>err</vars>) => { <br>
-            <kw2>return</kw2>
-            <vars>err</vars> && <vars>console</vars>.<func>err</func>(<vars>err</vars>) ||
-            <vars>console</vars>.<func>log</func>(<str>"server started on port 3000"</str>) })
-
-        </code>
-        <code class="detail code">
-            <span class="code-type">Template</span><br><br>
-            <const>&lt;h1&gt;</const>{{ <vars>msg</vars> }}<const>&lt;/h1&gt;</const>
-        </code>
-        <div>
-            <h2 class="heading">Looping</h2>
-        </div>
-        <code class="detail code">
-            <span class="code-type">JavaScript</span><br><br>
-
-            <kw>const</kw>
-            <const>Express</const> = <func>require</func>(<str>"express"</str>);<br>
-            <kw>const</kw>
-            <const>app</const> = <func>Express</func>();<br>
-            <kw>const</kw>
-            <const>Perthite</const> = <func>require</func>(<str>"Perthite"</str>);<br>
-            <br>
-            <const>app</const>.<func>engine</func>(<str>'html'</str>, <const>Perthite</const>.<func>engine</func>);<br>
-            <const>app</const>.<func>set</func>(<str>'views'</str>, <str>'./views'</str>);<br>
-            <const>app</const>.<func>set</func>(<str>'view engine'</str>, <str>'html'</str>);<br>
-            <br>
-            <const>app</const>.<func>get</func>('/', (<vars>req</vars>, <vars>res</vars>) => {<br>
-            <indent1>
-                <const>res</const>.<func>render</func>(<str>"main"</str>
-            </indent1>,
-            <br>
-            <indent2>{ <vars>users</vars>:
-                [{ name: <str>"User-1"</str>,lastname: <str>"Last-N-1"</str> }</indent2>,
-            <indent2>{ name: <str>"User-2"</str>, lastname: <str>"Last-N-2"</str> }]</indent2>
-            });
-            }<br />);<br>
-            <br>
-            <const>app</const>.<func>listen</func>(3000, (<vars>err</vars>) => { <br>
-            <kw2>return</kw2>
-            <vars>err</vars> && <vars>console</vars>.<func>err</func>(<vars>err</vars>) ||
-            <vars>console</vars>.<func>log</func>(<str>"server started on port 3000"</str>) })
-
-        </code>
-        <code class="detail code">
-            <span class="code-type">Template</span><br><br>
-            <const>&lt;ul</const> {{ <kw2>for</kw2>(<kw>let</kw> <vars>user</vars> <kw>of</kw> <vars>users</vars>) }}
-            <const>&gt</const>
-            <const>&lt;li&gt;</const>
-            {{ user.name }}<const>&lt;/li&gt;</const>
-            <const>&lt;/ul&gt;</const>
-        </code>
-        <div>
-            <h2 class="heading">Conditionals</h2>
-        </div>
-        <code class="detail code">
-            <span class="code-type">JavaScript</span><br><br>
-
-            <kw>const</kw>
-            <const>Express</const> = <func>require</func>(<str>"express"</str>);<br>
-            <kw>const</kw>
-            <const>app</const> = <func>Express</func>();<br>
-            <kw>const</kw>
-            <const>Perthite</const> = <func>require</func>(<str>"Perthite"</str>);<br>
-            <br>
-            <const>app</const>.<func>engine</func>(<str>'html'</str>, <const>Perthite</const>.<func>engine</func>);<br>
-            <const>app</const>.<func>set</func>(<str>'views'</str>, <str>'./views'</str>);<br>
-            <const>app</const>.<func>set</func>(<str>'view engine'</str>, <str>'html'</str>);<br>
-            <br>
-            <const>app</const>.<func>get</func>('/', (<vars>req</vars>, <vars>res</vars>) => {<br>
-            <indent1>
-                <const>res</const>.<func>render</func>(<str>"main"</str>
-            </indent1>,
-            <br>
-            <indent2>{ <vars>users</vars>:
-                [{ name: <str>"User-1"</str>,lastname: <str>"Last-N-1"</str> }</indent2>,
-            <indent2>{ name: <str>"User-2"</str>, lastname: <str>"Last-N-2"</str> }]</indent2>
-            });
-            }<br />);<br>
-            <br>
-            <const>app</const>.<func>listen</func>(3000, (<vars>err</vars>) => { <br>
-            <kw2>return</kw2>
-            <vars>err</vars> && <vars>console</vars>.<func>err</func>(<vars>err</vars>) ||
-            <vars>console</vars>.<func>log</func>(<str>"server started on port 3000"</str>) })
-
-        </code>
-        <code class="detail code">
-            <span class="code-type">Template</span><br><br>
-            <const>&lt;div</const> {{ if(users[0].name === "Chriss") }}<const>&gt;</const>
-            <br>
-            <indent1>
-                <const>&lt;h1&gt;</const>IF BLOCK<const>&lt;/h1&gt;</const>
-            </indent1><br>
-            <const>&lt;/div&gt;</const>
-            <br>
-            <const>&lt;div</const> {{ else if(users[0].name === "User-1") }}<const>&gt;</const>
-            <br>
-            <indent1>
-                <const>&lt;h1&gt;</const>ELSE IF BLOCK<const>&lt;/h1&gt;</const>
+        <div class="section">
+            <div>
+                <h2 class="heading">Usage With ExpressJs</h2>
+            </div>
+            <code class="detail code">
+                <span class="code-type">JavaScript</span><br><br>
+    
+                <kw>const</kw>
+                <const>Express</const> = <func>require</func>(<str>"express"</str>);<br>
+                <kw>const</kw>
+                <const>app</const> = <func>Express</func>();<br>
+                <kw>const</kw>
+                <const>Perthite</const> = <func>require</func>(<str>"Perthite"</str>);<br>
                 <br>
-            </indent1>
-            <const>&lt;/div&gt;</const>
-            <br>
-            <const>&lt;div</const> {{ else }}<const>&gt;</const>
-            <br>
-            <indent1>
-                <const>&lt;h1&gt;</const>ELSE BLOCK<const>&lt;/h1&gt;</const>
-            </indent1><br>
-            <const>&lt;/div&gt;</const>
-        </code>
-
-        <div>
-            <h2 class="heading">Calling functions on a Template</h2>
-        </div>
-        <code class="detail code">
-            <span class="code-type">JavaScript</span><br><br>
-
-            <kw>const</kw>
-            <const>Express</const> = <func>require</func>(<str>"express"</str>);<br>
-            <kw>const</kw>
-            <const>app</const> = <func>Express</func>();<br>
-            <kw>const</kw>
-            <const>Perthite</const> = <func>require</func>(<str>"Perthite"</str>);<br>
-            <br>
-            <const>app</const>.<func>engine</func>(<str>'html'</str>, <const>Perthite</const>.<func>engine</func>);<br>
-            <const>app</const>.<func>set</func>(<str>'views'</str>, <str>'./views'</str>);<br>
-            <const>app</const>.<func>set</func>(<str>'view engine'</str>, <str>'html'</str>);<br>
-            <br>
-            <const>app</const>.<func>get</func>('/', (<vars>req</vars>, <vars>res</vars>) => {<br>
-            <indent1>
-                <const>res</const>.<func>render</func>(<str>"main"</str> , { <br>
-                <indent1>
-                    <vars>concat</vars>: (<vars>arg1</vars>,
-                    <vars>arg2</vars>)=>{
-                </indent1>
-            </indent1>
-            <kw2>return</kw2> arg1 + <str>" "</str> + arg2 } <br>
-            });<br>
-            <br>
-            <const>app</const>.<func>listen</func>(3000, (<vars>err</vars>) => { <br>
-            <indent1>
+                <const>app</const>.<func>engine</func>(<str>'html'</str>, <const>Perthite</const>.<func>engine</func>);<br>
+                <const>app</const>.<func>set</func>(<str>'views'</str>, <str>'./views'</str>);<br>
+                <const>app</const>.<func>set</func>(<str>'view engine'</str>, <str>'html'</str>);<br>
+                <br>
+                <const>app</const>.<func>get</func>('/', (<vars>req</vars>, <vars>res</vars>) => {<br>
+                <const>res</const>.<func>render</func>(<str>"main"</str> , { <vars>user</vars>: <str>"Hello World"</str> });
+                }
+                );<br>
+                <br>
+                <const>app</const>.<func>listen</func>(3000, (<vars>err</vars>) => { <br>
                 <kw2>return</kw2>
-                <vars>err</vars> && <vars>console</vars>.<func>err</func>(<vars>err</vars>) ||<br>
-                <indent2>
-                    <vars>console</vars>.<func>log</func>(<str>"server started on port 3000"</str>)
-                </indent2>
-            </indent1><br>})
-        </code>
+                <vars>err</vars> && <vars>console</vars>.<func>err</func>(<vars>err</vars>) ||
+                <vars>console</vars>.<func>log</func>(<str>"server started on port 3000"</str>) })
+    
+            </code>
+            <code class="detail code">
+                <span class="code-type">Template</span><br><br>
+                <const>&lt;h1&gt;</const>{{ <vars>msg</vars> }}<const>&lt;/h1&gt;</const>
+            </code>
+        </div>
+        <div class="section">
+            <div>
+                <h2 class="heading">Looping</h2>
+            </div>
+            <code class="detail code">
+                <span class="code-type">JavaScript</span><br><br>
+    
+                <kw>const</kw>
+                <const>Express</const> = <func>require</func>(<str>"express"</str>);<br>
+                <kw>const</kw>
+                <const>app</const> = <func>Express</func>();<br>
+                <kw>const</kw>
+                <const>Perthite</const> = <func>require</func>(<str>"Perthite"</str>);<br>
+                <br>
+                <const>app</const>.<func>engine</func>(<str>'html'</str>, <const>Perthite</const>.<func>engine</func>);<br>
+                <const>app</const>.<func>set</func>(<str>'views'</str>, <str>'./views'</str>);<br>
+                <const>app</const>.<func>set</func>(<str>'view engine'</str>, <str>'html'</str>);<br>
+                <br>
+                <const>app</const>.<func>get</func>('/', (<vars>req</vars>, <vars>res</vars>) => {<br>
+                <indent1>
+                    <const>res</const>.<func>render</func>(<str>"main"</str>
+                </indent1>,
+                <br>
+                <indent2>{ <vars>users</vars>:
+                    [{ name: <str>"User-1"</str>,lastname: <str>"Last-N-1"</str> }</indent2>,
+                <indent2>{ name: <str>"User-2"</str>, lastname: <str>"Last-N-2"</str> }]</indent2>
+                });
+                }<br />);<br>
+                <br>
+                <const>app</const>.<func>listen</func>(3000, (<vars>err</vars>) => { <br>
+                <kw2>return</kw2>
+                <vars>err</vars> && <vars>console</vars>.<func>err</func>(<vars>err</vars>) ||
+                <vars>console</vars>.<func>log</func>(<str>"server started on port 3000"</str>) })
+    
+            </code>
+            <code class="detail code">
+                <span class="code-type">Template</span><br><br>
+                <const>&lt;ul</const> {{ <kw2>for</kw2>(<kw>let</kw> <vars>user</vars> <kw>of</kw> <vars>users</vars>) }}
+                <const>&gt</const>
+                <const>&lt;li&gt;</const>
+                {{ user.name }}<const>&lt;/li&gt;</const>
+                <const>&lt;/ul&gt;</const>
+            </code>
+        </div>
+        <div class="section">
+            <div>
+                <h2 class="heading">Conditionals</h2>
+            </div>
+            <code class="detail code">
+                <span class="code-type">JavaScript</span><br><br>
+    
+                <kw>const</kw>
+                <const>Express</const> = <func>require</func>(<str>"express"</str>);<br>
+                <kw>const</kw>
+                <const>app</const> = <func>Express</func>();<br>
+                <kw>const</kw>
+                <const>Perthite</const> = <func>require</func>(<str>"Perthite"</str>);<br>
+                <br>
+                <const>app</const>.<func>engine</func>(<str>'html'</str>, <const>Perthite</const>.<func>engine</func>);<br>
+                <const>app</const>.<func>set</func>(<str>'views'</str>, <str>'./views'</str>);<br>
+                <const>app</const>.<func>set</func>(<str>'view engine'</str>, <str>'html'</str>);<br>
+                <br>
+                <const>app</const>.<func>get</func>('/', (<vars>req</vars>, <vars>res</vars>) => {<br>
+                <indent1>
+                    <const>res</const>.<func>render</func>(<str>"main"</str>
+                </indent1>,
+                <br>
+                <indent2>{ <vars>users</vars>:
+                    [{ name: <str>"User-1"</str>,lastname: <str>"Last-N-1"</str> }</indent2>,
+                <indent2>{ name: <str>"User-2"</str>, lastname: <str>"Last-N-2"</str> }]</indent2>
+                });
+                }<br />);<br>
+                <br>
+                <const>app</const>.<func>listen</func>(3000, (<vars>err</vars>) => { <br>
+                <kw2>return</kw2>
+                <vars>err</vars> && <vars>console</vars>.<func>err</func>(<vars>err</vars>) ||
+                <vars>console</vars>.<func>log</func>(<str>"server started on port 3000"</str>) })
+    
+            </code>
+            <code class="detail code">
+                <span class="code-type">Template</span><br><br>
+                <const>&lt;div</const> {{ if(users[0].name === "Chriss") }}<const>&gt;</const>
+                <br>
+                <indent1>
+                    <const>&lt;h1&gt;</const>IF BLOCK<const>&lt;/h1&gt;</const>
+                </indent1><br>
+                <const>&lt;/div&gt;</const>
+                <br>
+                <const>&lt;div</const> {{ else if(users[0].name === "User-1") }}<const>&gt;</const>
+                <br>
+                <indent1>
+                    <const>&lt;h1&gt;</const>ELSE IF BLOCK<const>&lt;/h1&gt;</const>
+                    <br>
+                </indent1>
+                <const>&lt;/div&gt;</const>
+                <br>
+                <const>&lt;div</const> {{ else }}<const>&gt;</const>
+                <br>
+                <indent1>
+                    <const>&lt;h1&gt;</const>ELSE BLOCK<const>&lt;/h1&gt;</const>
+                </indent1><br>
+                <const>&lt;/div&gt;</const>
+            </code>
+        </div>
 
-        <code class="detail code">
-            <span class="code-type">Template</span><br><br>
-            <const>&lt;h1&gt;</const>{{ <func>concat</func>(<str>"hello"</str>, <str>"world"</str>) }}<const>&lt;/h1&gt;
-            </const>
-        </code>
+        <div class="section">
+            <div>
+                <h2 class="heading">Calling functions on a Template</h2>
+            </div>
+            <code class="detail code">
+                <span class="code-type">JavaScript</span><br><br>
+    
+                <kw>const</kw>
+                <const>Express</const> = <func>require</func>(<str>"express"</str>);<br>
+                <kw>const</kw>
+                <const>app</const> = <func>Express</func>();<br>
+                <kw>const</kw>
+                <const>Perthite</const> = <func>require</func>(<str>"Perthite"</str>);<br>
+                <br>
+                <const>app</const>.<func>engine</func>(<str>'html'</str>, <const>Perthite</const>.<func>engine</func>);<br>
+                <const>app</const>.<func>set</func>(<str>'views'</str>, <str>'./views'</str>);<br>
+                <const>app</const>.<func>set</func>(<str>'view engine'</str>, <str>'html'</str>);<br>
+                <br>
+                <const>app</const>.<func>get</func>('/', (<vars>req</vars>, <vars>res</vars>) => {<br>
+                <indent1>
+                    <const>res</const>.<func>render</func>(<str>"main"</str> , { <br>
+                    <indent1>
+                        <vars>concat</vars>: (<vars>arg1</vars>,
+                        <vars>arg2</vars>)=>{
+                    </indent1>
+                </indent1>
+                <kw2>return</kw2> arg1 + <str>" "</str> + arg2 } <br>
+                });<br>
+                <br>
+                <const>app</const>.<func>listen</func>(3000, (<vars>err</vars>) => { <br>
+                <indent1>
+                    <kw2>return</kw2>
+                    <vars>err</vars> && <vars>console</vars>.<func>err</func>(<vars>err</vars>) ||<br>
+                    <indent2>
+                        <vars>console</vars>.<func>log</func>(<str>"server started on port 3000"</str>)
+                    </indent2>
+                </indent1><br>})
+            </code>
+
+            <code class="detail code">
+                <span class="code-type">Template</span><br><br>
+                <const>&lt;h1&gt;</const>{{ <func>concat</func>(<str>"hello"</str>, <str>"world"</str>) }}<const>&lt;/h1&gt;
+                </const>
+            </code>
+        </div>
     </div>
     <div>
         <footer>
@@ -444,14 +468,16 @@
             </div>
         </footer>
     </div>
-<script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-42434400-3', 'auto');
-      ga('send', 'pageview');
+        ga('create', 'UA-42434400-3', 'auto');
+        ga('send', 'pageview');
     </script>
 
 </body>
