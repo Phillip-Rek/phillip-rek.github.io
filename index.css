@@ -1,0 +1,14 @@
+#playlist-usage-info {
+    width: calc(100vw - 250px - 80px);
+    background: darkslategrey;
+    border-radius: 10px 10px 80px 10px;
+    position: absolute;
+    /* left: x + 20 + px; */
+    top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px 30px 10px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 25px 85%, 0% 100%);
+    font-weight: bold;
+}
